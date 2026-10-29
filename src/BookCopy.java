@@ -25,6 +25,10 @@ public class BookCopy {
         if (borrowed) {
             return false;
         }
+        if (borrowerName == null || borrowerName.isEmpty()) {
+            return false;
+        }
+
         borrowed = true;
         borrower = borrowerName;
         return true;
